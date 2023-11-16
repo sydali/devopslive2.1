@@ -94,3 +94,45 @@ root@dice-devops:/home/Repos/devopslive2.1# docker network inspect my_network
 ```
 
 # The two containers are attaached to same network
+``
+
+
+oot@dice-devops:/home/Repos/devopslive2.1# docker compose up
+[+] Running 1/1
+ ⠿ Container nginx_container_2  Created                                                                                                                                                                                                                  0.1s
+Attaching to httpd_container, nginx_container_2
+nginx_container_2  | /docker-entrypoint.sh: /docker-entrypoint.d/ is not empty, will attempt to perform configuration
+nginx_container_2  | /docker-entrypoint.sh: Looking for shell scripts in /docker-entrypoint.d/
+nginx_container_2  | /docker-entrypoint.sh: Launching /docker-entrypoint.d/10-listen-on-ipv6-by-default.sh
+nginx_container_2  | 10-listen-on-ipv6-by-default.sh: info: Getting the checksum of /etc/nginx/conf.d/default.conf
+nginx_container_2  | 10-listen-on-ipv6-by-default.sh: info: Enabled listen on IPv6 in /etc/nginx/conf.d/default.conf
+nginx_container_2  | /docker-entrypoint.sh: Sourcing /docker-entrypoint.d/15-local-resolvers.envsh
+nginx_container_2  | /docker-entrypoint.sh: Launching /docker-entrypoint.d/20-envsubst-on-templates.sh
+nginx_container_2  | /docker-entrypoint.sh: Launching /docker-entrypoint.d/30-tune-worker-processes.sh
+nginx_container_2  | /docker-entrypoint.sh: Configuration complete; ready for start up
+nginx_container_2  | 2023/11/16 08:40:41 [notice] 1#1: using the "epoll" event method
+nginx_container_2  | 2023/11/16 08:40:41 [notice] 1#1: nginx/1.25.3
+nginx_container_2  | 2023/11/16 08:40:41 [notice] 1#1: built by gcc 12.2.0 (Debian 12.2.0-14)
+nginx_container_2  | 2023/11/16 08:40:41 [notice] 1#1: OS: Linux 5.15.0-67-generic
+nginx_container_2  | 2023/11/16 08:40:41 [notice] 1#1: getrlimit(RLIMIT_NOFILE): 1048576:1048576
+nginx_container_2  | 2023/11/16 08:40:41 [notice] 1#1: start worker processes
+nginx_container_2  | 2023/11/16 08:40:41 [notice] 1#1: start worker process 28
+httpd_container    | AH00558: httpd: Could not reliably determine the server's fully qualified domain name, using 172.23.0.3. Set the 'ServerName' directive globally to suppress this message
+httpd_container    | AH00558: httpd: Could not reliably determine the server's fully qualified domain name, using 172.23.0.3. Set the 'ServerName' directive globally to suppress this message
+httpd_container    | [Thu Nov 16 08:40:41.372652 2023] [mpm_event:notice] [pid 1:tid 139966350382976] AH00489: Apache/2.4.58 (Unix) configured -- resuming normal operations
+httpd_container    | [Thu Nov 16 08:40:41.374784 2023] [core:notice] [pid 1:tid 139966350382976] AH00094: Command line: 'httpd -D FOREGROUND'
+^CGracefully stopping... (press Ctrl+C again to force)
+[+] Running 2/2
+ ⠿ Container httpd_container    Stopped                                                                                                                                                                                                                  1.2s
+ ⠿ Container nginx_container_2  Stopped                                                                                                                                                                                                                  0.2s
+canceled
+root@dice-devops:/home/Repos/devopslive2.1# docker compose up -d
+[+] Running 2/2
+ ⠿ Container nginx_container_2  Started                                                                                                                                                                                                                  0.8s
+ ⠿ Container httpd_container    Started                                                                                                                                                                                                                  0.9s
+root@dice-devops:/home/Repos/devopslive2.1#
+
+
+
+
+```
