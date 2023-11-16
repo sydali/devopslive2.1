@@ -1,11 +1,11 @@
 services:
- #web:
- # image: nginx
- # container_name: nginx_container
- # ports:
- #  - "8080:80"
- # networks:
- #  - frontend
+ web:
+  image: nginx
+  container_name: nginx_container
+  ports:
+   - "8080:80"
+  networks:
+   - frontend
  web-server:
   image: httpd
   container_name: httpd_container
