@@ -157,3 +157,4 @@ nginx_container
 root@dice-devops:/home/Repos/devopslive2.1#
 
 ```
+![image](https://github.com/sydali/devopslive2.1/assets/449393/ff939309-4273-4db1-a90b-6ab3bac5d110)
