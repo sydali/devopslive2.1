@@ -96,8 +96,6 @@ root@dice-devops:/home/Repos/devopslive2.1# docker network inspect my_network
 # The two containers are attaached to same network
 
 ```
-
-
 oot@dice-devops:/home/Repos/devopslive2.1# docker compose up
 [+] Running 1/1
  ⠿ Container nginx_container_2  Created                                                                                                                                                                                                                  0.1s
@@ -132,8 +130,5 @@ root@dice-devops:/home/Repos/devopslive2.1# docker compose up -d
  ⠿ Container nginx_container_2  Started                                                                                                                                                                                                                  0.8s
  ⠿ Container httpd_container    Started                                                                                                                                                                                                                  0.9s
 root@dice-devops:/home/Repos/devopslive2.1#
-
-
-
 
 ```
