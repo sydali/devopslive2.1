@@ -1,0 +1,13 @@
+services:
+ web:
+  image: nginx
+  container_name: nginx_container
+  ports:
+   - "8080:80"
+  networks:
+   - frontend
+
+networks:
+  frontend:
+    name: my_network
+    driver: bridge
