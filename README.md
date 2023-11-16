@@ -94,7 +94,8 @@ root@dice-devops:/home/Repos/devopslive2.1# docker network inspect my_network
 ```
 
 # The two containers are attaached to same network
-``
+
+```
 
 
 oot@dice-devops:/home/Repos/devopslive2.1# docker compose up
