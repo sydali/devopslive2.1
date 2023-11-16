@@ -125,10 +125,18 @@ httpd_container    | [Thu Nov 16 08:40:41.374784 2023] [core:notice] [pid 1:tid 
  ⠿ Container httpd_container    Stopped                                                                                                                                                                                                                  1.2s
  ⠿ Container nginx_container_2  Stopped                                                                                                                                                                                                                  0.2s
 canceled
-root@dice-devops:/home/Repos/devopslive2.1# docker compose up -d
+root@dice-devops:/home/Repos/devopslive2.1# docker compose up -d --remove-orphans
 [+] Running 2/2
- ⠿ Container nginx_container_2  Started                                                                                                                                                                                                                  0.8s
- ⠿ Container httpd_container    Started                                                                                                                                                                                                                  0.9s
+ ⠿ Container nginx_container_2  Started                                                                                                                                                                                                                  0.7s
+ ⠿ Container httpd_container    Running                                                                                                                                                                                                                  0.0s
+root@dice-devops:/home/Repos/devopslive2.1# docker compos ps
+docker: 'compos' is not a docker command.
+See 'docker --help'
+root@dice-devops:/home/Repos/devopslive2.1# docker compose  ps
+NAME                COMMAND                  SERVICE             STATUS              PORTS
+httpd_container     "httpd-foreground"       web-server          running             0.0.0.0:8081->80/tcp, :::8081->80/tcp
+nginx_container_2   "/docker-entrypoint.…"   web2                running             0.0.0.0:8082->80/tcp, :::8082->80/tcp
 root@dice-devops:/home/Repos/devopslive2.1#
+
 
 ```
