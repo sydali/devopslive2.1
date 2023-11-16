@@ -140,3 +140,53 @@ root@dice-devops:/home/Repos/devopslive2.1#
 
 
 ```
+
+
+
+
+```
+root@dice-devops:/home/Repos/devopslive2.1# docker stop nginx_container
+nginx_container
+root@dice-devops:/home/Repos/devopslive2.1# docke rm nginx_container -f
+Command 'docke' not found, did you mean:
+  command 'docker' from deb docker.io (24.0.5-0ubuntu1~22.04.1)
+  command 'docker' from deb podman-docker (3.4.4+ds1-1ubuntu1.22.04.2)
+Try: apt install <deb name>
+root@dice-devops:/home/Repos/devopslive2.1# docker  rm nginx_container -f
+nginx_container
+root@dice-devops:/home/Repos/devopslive2.1#
+
+```
+![image](https://github.com/sydali/devopslive2.1/assets/449393/e57420b0-3f59-49e3-9ad1-5226e948a31c)
+
+
+
+```
+#listing
+
+root@dice-devops:/home/Repos/devopslive2.1# docker container ls
+CONTAINER ID   IMAGE        COMMAND                  CREATED          STATUS          PORTS                                       NAMES
+ad5b2d7b0e63   nginx        "/docker-entrypoint.…"   7 minutes ago    Up 7 minutes    0.0.0.0:8082->80/tcp, :::8082->80/tcp       nginx_container_2
+f76d4e9ce163   httpd        "httpd-foreground"       11 minutes ago   Up 10 minutes   0.0.0.0:8081->80/tcp, :::8081->80/tcp       httpd_container
+
+
+#stopping
+
+root@dice-devops:/home/Repos/devopslive2.1# docker compose stop
+[+] Running 2/2
+ ⠿ Container httpd_container    Stopped                                                                                                                                                                                                                  1.2s
+ ⠿ Container nginx_container_2  Stopped                                                                                                                                                                                                                  0.2s
+
+#removing
+
+root@dice-devops:/home/Repos/devopslive2.1# docker compose rm -f
+Going to remove nginx_container_2, httpd_container
+[+] Running 2/0
+ ⠿ Container httpd_container    Removed                                                                                                                                                                                                                  0.0s
+ ⠿ Container nginx_container_2  Removed                                                                                                                                                                                                                  0.0s
+root@dice-devops:/home/Repos/devopslive2.1#
+
+
+```
+
+
