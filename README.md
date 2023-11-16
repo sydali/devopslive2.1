@@ -140,3 +140,20 @@ root@dice-devops:/home/Repos/devopslive2.1#
 
 
 ```
+
+
+
+
+````
+root@dice-devops:/home/Repos/devopslive2.1# docker stop nginx_container
+nginx_container
+root@dice-devops:/home/Repos/devopslive2.1# docke rm nginx_container -f
+Command 'docke' not found, did you mean:
+  command 'docker' from deb docker.io (24.0.5-0ubuntu1~22.04.1)
+  command 'docker' from deb podman-docker (3.4.4+ds1-1ubuntu1.22.04.2)
+Try: apt install <deb name>
+root@dice-devops:/home/Repos/devopslive2.1# docker  rm nginx_container -f
+nginx_container
+root@dice-devops:/home/Repos/devopslive2.1#
+
+```
