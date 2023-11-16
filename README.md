@@ -19,3 +19,4 @@ root@dice-devops:/home/Repos/devopslive2.1#
 ```
 
 
+![image](https://github.com/sydali/devopslive2.1/assets/449393/895cdfd9-d009-4fae-add3-0a098cea0100)
