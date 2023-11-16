@@ -144,7 +144,7 @@ root@dice-devops:/home/Repos/devopslive2.1#
 
 
 
-````
+```
 root@dice-devops:/home/Repos/devopslive2.1# docker stop nginx_container
 nginx_container
 root@dice-devops:/home/Repos/devopslive2.1# docke rm nginx_container -f
@@ -157,4 +157,5 @@ nginx_container
 root@dice-devops:/home/Repos/devopslive2.1#
 
 ```
-![image](https://github.com/sydali/devopslive2.1/assets/449393/ff939309-4273-4db1-a90b-6ab3bac5d110)
+![image](https://github.com/sydali/devopslive2.1/assets/449393/e57420b0-3f59-49e3-9ad1-5226e948a31c)
+
