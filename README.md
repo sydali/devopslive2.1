@@ -176,6 +176,9 @@ root@dice-devops:/home/Repos/devopslive2.1# docker compose stop
 [+] Running 2/2
  ⠿ Container httpd_container    Stopped                                                                                                                                                                                                                  1.2s
  ⠿ Container nginx_container_2  Stopped                                                                                                                                                                                                                  0.2s
+
+#removing
+
 root@dice-devops:/home/Repos/devopslive2.1# docker compose rm -f
 Going to remove nginx_container_2, httpd_container
 [+] Running 2/0
