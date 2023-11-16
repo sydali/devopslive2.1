@@ -38,3 +38,59 @@ nginx_container     "/docker-entrypoint.…"   web                 running      
 ```
 
 ![image](https://github.com/sydali/devopslive2.1/assets/449393/8505dee9-8fbc-4820-983f-eaafafee7019)
+
+
+```
+root@dice-devops:/home/Repos/devopslive2.1# docker network inspect my_network
+[
+    {
+        "Name": "my_network",
+        "Id": "fa82bac86cea8f54ef54a07b2b96ea542e637fcff2d9891be8e24f61ef05a491",
+        "Created": "2023-11-16T07:44:31.89003619Z",
+        "Scope": "local",
+        "Driver": "bridge",
+        "EnableIPv6": false,
+        "IPAM": {
+            "Driver": "default",
+            "Options": null,
+            "Config": [
+                {
+                    "Subnet": "172.23.0.0/16",
+                    "Gateway": "172.23.0.1"
+                }
+            ]
+        },
+        "Internal": false,
+        "Attachable": false,
+        "Ingress": false,
+        "ConfigFrom": {
+            "Network": ""
+        },
+        "ConfigOnly": false,
+        "Containers": {
+            "29b76658ce26b2ac1fc43584b4da617788d450917b9acade40d6ee17ce234b48": {
+                "Name": "httpd_container",
+                "EndpointID": "602b4844dd579bf1f4039263dadf8c9b396b5dbfcf526a46fe463124cb08d798",
+                "MacAddress": "02:42:ac:17:00:02",
+                "IPv4Address": "172.23.0.2/16",
+                "IPv6Address": ""
+            },
+            "4658751d65e098a05dce104e495a6052020fa230428c6a446cff6f5ec27cec86": {
+                "Name": "nginx_container",
+                "EndpointID": "cc28e84206ff0780a6dd56aedbe29e59cfd8eb98d4134ae71e88a83cc76868ae",
+                "MacAddress": "02:42:ac:17:00:03",
+                "IPv4Address": "172.23.0.3/16",
+                "IPv6Address": ""
+            }
+        },
+        "Options": {},
+        "Labels": {
+            "com.docker.compose.network": "frontend",
+            "com.docker.compose.project": "devopslive21",
+            "com.docker.compose.version": "2.3.3"
+        }
+    }
+
+```
+
+# The two containers are attaached to same network
